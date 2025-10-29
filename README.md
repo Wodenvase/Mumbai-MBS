@@ -193,11 +193,3 @@ cargo test
 
 ### Formalization Impact
 ![Payment by Formalization](screenshots/paymentformalization.png)
-
-## License
-
-[Add your license information here]
-
-## Contributing
-
-[Add contributing guidelines here] 
