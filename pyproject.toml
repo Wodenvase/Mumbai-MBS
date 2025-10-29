@@ -1,0 +1,49 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "mumbai-mbs"
+description = "High-Performance Mumbai MBS Simulator (Python/Rust Hybrid)"
+version = "0.1.0"
+authors = [
+    {name = "MBS Team", email = "team@mumbai-mbs.com"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "polars>=0.20.0",
+    "pydantic>=2.0.0",
+    "plotly>=5.0.0",
+    "streamlit>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "maturin>=1.0,<2.0",
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[tool.maturin]
+module-name = "mbs_core"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
